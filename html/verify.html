@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本登録</title>
+</head>
+<body>
+<script>
+    // URLのtokenを取得してregister.htmlに渡す
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+    if (token) {
+        window.location.href = `register.html?token=${token}`;
+    } else {
+        window.location.href = 'login.html';
+    }
+</script>
+</body>
+</html>

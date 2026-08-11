@@ -1,0 +1,397 @@
+> Task :compileJava
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :resolveMainClassName
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.12)
+
+2026-04-12T14:22:38.683+09:00  INFO 17091 --- [           main] c.m.auth_service.AuthServiceApplication  : Starting AuthServiceApplication using Java 25.0.2 with PID 17091 (/Users/pelo8/projects/auth-service/build/classes/java/main started by pelo8 in /Users/pelo8/projects/auth-service)
+2026-04-12T14:22:38.684+09:00  INFO 17091 --- [           main] c.m.auth_service.AuthServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-04-12T14:22:38.955+09:00  INFO 17091 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-12T14:22:38.980+09:00  INFO 17091 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 5 JPA repository interfaces.
+2026-04-12T14:22:39.206+09:00  INFO 17091 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-04-12T14:22:39.213+09:00  INFO 17091 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-12T14:22:39.213+09:00  INFO 17091 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-04-12T14:22:39.233+09:00  INFO 17091 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-12T14:22:39.233+09:00  INFO 17091 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 527 ms
+2026-04-12T14:22:39.369+09:00  INFO 17091 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-12T14:22:39.393+09:00  INFO 17091 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.44.Final
+2026-04-12T14:22:39.407+09:00  INFO 17091 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-12T14:22:39.533+09:00  INFO 17091 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-12T14:22:39.545+09:00  INFO 17091 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-12T14:22:41.559+09:00  INFO 17091 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@144ee8a7
+2026-04-12T14:22:41.560+09:00  INFO 17091 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-12T14:22:42.561+09:00  INFO 17091 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 23.26
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-12T14:22:42.950+09:00  INFO 17091 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-12T14:22:42.951+09:00  INFO 17091 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-12T14:22:43.112+09:00  INFO 17091 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-12T14:22:43.374+09:00  INFO 17091 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-04-12T14:22:43.498+09:00  INFO 17091 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-04-12T14:22:43.503+09:00  INFO 17091 --- [           main] c.m.auth_service.AuthServiceApplication  : Started AuthServiceApplication in 4.996 seconds (process running for 5.148)
+2026-04-12T14:27:26.522+09:00  INFO 17091 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-12T14:27:26.523+09:00  INFO 17091 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-12T14:27:26.528+09:00  INFO 17091 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-04-12T15:13:49.922+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m7s942ms).
+2026-04-12T15:48:12.437+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@16a533ba (ORA-17008: クローズされた接続です
+https://docs.oracle.com/error-help/db/ora-17008/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T15:48:12.439+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m22s520ms).
+2026-04-12T15:48:29.275+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@3bfbfc0e (ORA-17008: クローズされた接続です
+https://docs.oracle.com/error-help/db/ora-17008/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T17:14:37.673+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m13s340ms).
+2026-04-12T17:45:08.223+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@7c8293db (ORA-17008: クローズされた接続です
+https://docs.oracle.com/error-help/db/ora-17008/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T17:45:13.278+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m5s448ms).
+2026-04-12T18:31:28.563+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@22c51a7b (ORA-17008: クローズされた接続です
+https://docs.oracle.com/error-help/db/ora-17008/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T18:31:29.422+09:00  WARN 17091 --- [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (32501b1e-1a35-4124-ad24-7a447205f41d)
+
+java.sql.SQLException: ORA-17868: 不明なホストが指定されました。: adb.ap-osaka-1.oraclecloud.com
+https://docs.oracle.com/error-help/db/ora-17868/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1853) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1204) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1189) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.3.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: oracle.net.ns.NetException: ORA-17868: 不明なホストが指定されました。: adb.ap-osaka-1.oraclecloud.com
+https://docs.oracle.com/error-help/db/ora-17868/
+	at oracle.net.resolver.AddrResolution.resolveAddrTree(AddrResolution.java:1169) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.resolver.AddrResolution.resolveTNSAddress(AddrResolution.java:948) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.resolver.AddrResolution.initConnStrategy(AddrResolution.java:643) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.resolver.AddrResolution.<init>(AddrResolution.java:458) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocol.<init>(NSProtocol.java:248) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.<init>(NSProtocolNIO.java:149) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1067) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	... 14 common frames omitted
+
+2026-04-12T18:31:39.123+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m25s846ms).
+2026-04-12T18:47:40.106+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s999ms).
+2026-04-12T18:47:43.111+09:00  WARN 17091 --- [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (0d8f617b-c8c7-4ff3-ab92-6d1880574d1d)
+
+java.sql.SQLException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=u8GBiFJfQ4CXSo1qaVf6jw==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1853) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1204) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1189) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.3.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: oracle.net.ns.NetException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=u8GBiFJfQ4CXSo1qaVf6jw==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:935) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:462) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:270) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:353) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3684) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1083) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	... 14 common frames omitted
+
+2026-04-12T19:03:10.942+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s837ms).
+2026-04-12T19:18:57.804+09:00  WARN 17091 --- [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (7c455417-cac1-433a-8710-f243528e6c08)
+
+java.sql.SQLException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=AoBY4MpDRye129jDBvvKuQ==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1853) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1204) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1189) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.3.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: oracle.net.ns.NetException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=AoBY4MpDRye129jDBvvKuQ==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:935) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:462) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:270) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:353) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3684) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1083) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	... 14 common frames omitted
+
+2026-04-12T19:34:13.113+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m32s165ms).
+2026-04-12T19:42:21.012+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m7s898ms).
+2026-04-12T19:42:48.869+09:00  WARN 17091 --- [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (cdc3343a-c71f-423a-bc3d-28c2a249e949)
+
+java.sql.SQLException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=zlmcasBqRxmTBM6rBZ+Rlw==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1853) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1204) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1189) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.3.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: oracle.net.ns.NetException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=zlmcasBqRxmTBM6rBZ+Rlw==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:935) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:462) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:270) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:353) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3684) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1083) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	... 14 common frames omitted
+
+2026-04-12T19:58:21.998+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s983ms).
+2026-04-12T20:28:50.476+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m28s478ms).
+2026-04-12T20:28:59.168+09:00  WARN 17091 --- [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (767d0166-c2c5-4a62-80c3-5090280cb9eb)
+
+java.sql.SQLException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=R3IRbor6QJqfSJ0UJUWPdg==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1853) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1204) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1189) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.3.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: oracle.net.ns.NetException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=R3IRbor6QJqfSJ0UJUWPdg==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:935) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:462) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:270) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:353) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3684) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1083) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	... 14 common frames omitted
+
+2026-04-12T20:43:30.942+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m10s464ms).
+2026-04-12T20:58:36.399+09:00  WARN 17091 --- [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (deec2121-7e5b-4bce-b608-11dfed64066e)
+
+java.sql.SQLException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=VMWUbi/TRMOcc6DhPqxS8A==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1853) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1204) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1189) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.3.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: oracle.net.ns.NetException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=VMWUbi/TRMOcc6DhPqxS8A==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:935) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:462) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:270) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:353) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3684) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1083) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	... 14 common frames omitted
+
+2026-04-12T20:58:45.025+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m14s83ms).
+2026-04-12T20:59:47.089+09:00  WARN 17091 --- [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (1740e771-6202-4785-8c03-8f27697609fb)
+
+java.sql.SQLException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=IaCfclRiQZGbJj3OZP27NA==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1853) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1204) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1189) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.3.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: oracle.net.ns.NetException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=IaCfclRiQZGbJj3OZP27NA==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:935) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:462) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:270) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:353) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3684) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1083) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	... 14 common frames omitted
+
+2026-04-12T21:00:56.536+09:00  WARN 17091 --- [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (6b4a89d4-7ed1-445c-be6f-4fc49e45d904)
+
+java.sql.SQLException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=ep4IgNBMSr+hd1jWd0tPjg==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1853) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1204) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1189) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.3.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: oracle.net.ns.NetException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=ep4IgNBMSr+hd1jWd0tPjg==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:935) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:462) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:270) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:353) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3684) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1083) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	... 14 common frames omitted
+
+2026-04-12T21:02:06.210+09:00  WARN 17091 --- [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (f603b5a9-b2bf-4863-bf66-fb244b18db93)
+
+java.sql.SQLException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=R1pCJp3FRPGZrYnY3hrLZQ==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1853) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1204) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1189) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.3.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: oracle.net.ns.NetException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=R1pCJp3FRPGZrYnY3hrLZQ==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:935) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:462) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:270) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:353) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3684) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1083) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	... 14 common frames omitted
+
+2026-04-12T21:03:15.647+09:00  WARN 17091 --- [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Pool is empty, failed to create/setup connection (f93d69fa-1a9d-446e-89cc-bf1d4a242063)
+
+java.sql.SQLException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=ekTCSY+JS9qCG3q8bJNCpA==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:1853) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1204) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1189) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:106) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:887) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:694) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731) ~[HikariCP-6.3.3.jar:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: oracle.net.ns.NetException: ORA-12506: TNS: リスナーはサービスACLフィルタリングに基づいて接続を拒否しました (CONNECTION_ID=ekTCSY+JS9qCG3q8bJNCpA==)
+https://docs.oracle.com/error-help/db/ora-12506/
+	at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:935) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:462) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:270) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:353) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3684) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1083) ~[ojdbc11-23.7.0.25.01.jar:23.7.0.25.01]
+	... 14 common frames omitted
+
+2026-04-12T21:54:22.274+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m36s992ms).
+2026-04-12T21:54:58.927+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@4bb787f8 (ORA-17900: 無効な操作です。接続されていません。
+https://docs.oracle.com/error-help/db/ora-17900/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T22:10:46.931+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@3b35d72b (ORA-17900: 無効な操作です。接続されていません。
+https://docs.oracle.com/error-help/db/ora-17900/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T22:11:07.320+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m31s143ms).
+2026-04-12T22:26:38.187+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s867ms).
+2026-04-12T22:26:49.938+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@20d0a6a7 (ORA-17900: 無効な操作です。接続されていません。
+https://docs.oracle.com/error-help/db/ora-17900/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T22:42:09.231+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m31s44ms).
+2026-04-12T22:42:30.229+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@37f0cb22 (ORA-17900: 無効な操作です。接続されていません。
+https://docs.oracle.com/error-help/db/ora-17900/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T22:56:55.586+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m16s338ms).
+2026-04-12T22:57:37.711+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@1dc65962 (ORA-17900: 無効な操作です。接続されていません。
+https://docs.oracle.com/error-help/db/ora-17900/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T22:58:10.967+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@1ce58705 (ORA-17900: 無効な操作です。接続されていません。
+https://docs.oracle.com/error-help/db/ora-17900/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T23:13:56.648+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m31s46ms).
+2026-04-12T23:29:20.173+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@1a86bc87 (ORA-17900: 無効な操作です。接続されていません。
+https://docs.oracle.com/error-help/db/ora-17900/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T23:44:27.497+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m30s849ms).
+2026-04-12T23:49:59.440+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m31s942ms).
+2026-04-12T23:50:08.350+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@b6c0813 (ORA-17900: 無効な操作です。接続されていません。
+https://docs.oracle.com/error-help/db/ora-17900/). Possibly consider using a shorter maxLifetime value.
+2026-04-12T23:51:07.708+09:00  WARN 17091 --- [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@52689db4 (ORA-17900: 無効な操作です。接続されていません。
+https://docs.oracle.com/error-help/db/ora-17900/). Possibly consider using a shorter maxLifetime value.

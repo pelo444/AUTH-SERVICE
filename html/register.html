@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザー登録・変更</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 420px;
+        }
+        h1 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .form-group { margin-bottom: 16px; }
+        label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 6px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #333;
+            background: #fff;
+        }
+        input[readonly] { background: #f5f5f5; color: #888; }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+        .btn {
+            width: 100%;
+            padding: 11px;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        .btn-primary { background: #4a90e2; color: #fff; }
+        .btn-primary:hover { background: #357abd; }
+        .btn-secondary {
+            background: #fff;
+            color: #555;
+            border: 1px solid #ddd;
+        }
+        .btn-secondary:hover { background: #f5f5f5; }
+        .btn-danger { background: #e74c3c; color: #fff; }
+        .btn-danger:hover { background: #c0392b; }
+        .message {
+            padding: 10px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 16px;
+            display: none;
+        }
+        .message.error { background: #fdecea; color: #e74c3c; }
+        .message.success { background: #eafaf1; color: #27ae60; }
+        .section { display: none; }
+        .section.active { display: block; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>ユーザー登録・変更</h1>
+    <div id="message" class="message"></div>
+
+    <!-- メールアドレス入力（新規登録ステップ1） -->
+    <div id="emailSection" class="section">
+        <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" placeholder="メールアドレスを入力">
+        </div>
+        <button class="btn btn-primary" onclick="sendRegistrationEmail()">
+            本登録用URLを送信
+        </button>
+        <button class="btn btn-secondary" onclick="goToLogin()">戻る</button>
+    </div>
+
+    <!-- 本登録フォーム（新規登録ステップ2） -->
+    <div id="registerSection" class="section">
+        <div class="form-group">
+            <label for="username">ユーザー名</label>
+            <input type="text" id="username" placeholder="ユーザー名を入力">
+        </div>
+        <div class="form-group">
+            <label for="newPersonId">Person ID</label>
+            <input type="text" id="newPersonId" placeholder="Person IDを入力">
+        </div>
+        <div class="form-group">
+            <label for="newPassword">パスワード（10文字以上・英数大小文字混在）</label>
+            <input type="password" id="newPassword" placeholder="パスワードを入力">
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">パスワード（確認）</label>
+            <input type="password" id="confirmPassword" placeholder="パスワードを再入力">
+        </div>
+        <button class="btn btn-primary" onclick="register()">登録</button>
+        <button class="btn btn-secondary" onclick="goToLogin()">キャンセル</button>
+    </div>
+
+    <!-- 変更・削除メニュー -->
+    <div id="menuSection" class="section">
+        <div class="form-group">
+            <label for="menuSelect">操作を選択</label>
+            <select id="menuSelect" onchange="onMenuChange()">
+                <option value="">選択してください</option>
+                <option value="A">A. ユーザー名を変更する</option>
+                <option value="B">B. パスワードを変更する</option>
+                <option value="C">C. 登録情報を削除する</option>
+            </select>
+        </div>
+
+        <!-- A: ユーザー名変更 -->
+        <div id="changeUsernameForm" class="section">
+            <div class="form-group">
+                <label>Person ID</label>
+                <input type="text" id="personIdForUsername" readonly>
+            </div>
+            <div class="form-group">
+                <label for="newUsername">新しいユーザー名</label>
+                <input type="text" id="newUsername" placeholder="新しいユーザー名を入力">
+            </div>
+            <button class="btn btn-primary" onclick="changeUsername()">変更</button>
+            <button class="btn btn-secondary" onclick="goToLogin()">戻る</button>
+        </div>
+
+        <!-- B: パスワード変更 -->
+        <div id="changePasswordForm" class="section">
+            <div class="form-group">
+                <label>Person ID</label>
+                <input type="text" id="personIdForPassword" readonly>
+            </div>
+            <div class="form-group">
+                <label for="changePassword">新しいパスワード（10文字以上・英数大小文字混在）</label>
+                <input type="password" id="changePassword" placeholder="新しいパスワードを入力">
+            </div>
+            <div class="form-group">
+                <label for="changeConfirmPassword">パスワード（確認）</label>
+                <input type="password" id="changeConfirmPassword" placeholder="パスワードを再入力">
+            </div>
+            <button class="btn btn-primary" onclick="changePassword()">変更</button>
+            <button class="btn btn-secondary" onclick="goToLogin()">戻る</button>
+        </div>
+
+        <!-- C: 削除 -->
+        <div id="deleteForm" class="section">
+            <div class="form-group">
+                <label>Person ID</label>
+                <input type="text" id="personIdForDelete" readonly>
+            </div>
+            <button class="btn btn-danger" onclick="deleteUser()">削除</button>
+            <button class="btn btn-secondary" onclick="goToLogin()">戻る</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const API_BASE = '/api';
+    let currentToken = '';
+    let currentPersonId = '';
+
+    window.onload = async () => {
+        const params = new URLSearchParams(window.location.search);
+        currentToken = params.get('token') || '';
+        const personId = params.get('personId') || '';
+        const password = params.get('password') || '';
+
+        if (currentToken) {
+            // tokenがある場合は本登録フォームを表示
+            const res = await fetch(
+                `${API_BASE}/users/verify?token=${currentToken}`,
+                { credentials: 'include' }
+            );
+            if (res.ok) {
+                showSection('registerSection');
+            } else {
+                showMessage('tokenが無効または期限切れです', 'error');
+                showSection('emailSection');
+            }
+            return;
+        }
+
+        // ログイン状態を確認
+        const statusRes = await fetch(`${API_BASE}/auth/status`, { credentials: 'include' });
+        const statusData = await statusRes.json();
+
+        if (statusData.loggedIn) {
+            // ログイン済み → 変更・削除メニュー
+            currentPersonId = statusData.personId;
+            document.getElementById('personIdForUsername').value = currentPersonId;
+            document.getElementById('personIdForPassword').value = currentPersonId;
+            document.getElementById('personIdForDelete').value = currentPersonId;
+            showSection('menuSection');
+        } else if (personId) {
+            // ログイン画面から登録情報変更ボタンで来た場合
+            // まずログインを試みる
+            const loginRes = await fetch(`${API_BASE}/auth/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify({ personId, password })
+            });
+            if (loginRes.ok) {
+                const loginData = await loginRes.json();
+                currentPersonId = loginData.personId;
+                document.getElementById('personIdForUsername').value = currentPersonId;
+                document.getElementById('personIdForPassword').value = currentPersonId;
+                document.getElementById('personIdForDelete').value = currentPersonId;
+                showSection('menuSection');
+            } else {
+                showSection('emailSection');
+            }
+        } else {
+            // 新規登録
+            showSection('emailSection');
+        }
+    };
+
+    // 本登録メール送信
+    async function sendRegistrationEmail() {
+        const email = document.getElementById('email').value.trim();
+        if (!email) {
+            showMessage('メールアドレスを入力してください', 'error');
+            return;
+        }
+        const res = await fetch(`${API_BASE}/users/preregister`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify({ email })
+        });
+        const data = await res.json();
+        if (res.ok) {
+            showMessage('本登録用URLをメールに送信しました。メールをご確認ください。', 'success');
+        } else {
+            showMessage(data.message || '送信に失敗しました', 'error');
+        }
+    }
+
+    // パスワードバリデーション
+    function validatePassword(password) {
+        if (password.length < 10) return 'パスワードは10文字以上で入力してください';
+        if (!/[a-z]/.test(password)) return 'パスワードに小文字を含めてください';
+        if (!/[A-Z]/.test(password)) return 'パスワードに大文字を含めてください';
+        if (!/[0-9]/.test(password)) return 'パスワードに数字を含めてください';
+        if (!/^[a-zA-Z0-9]+$/.test(password)) return 'パスワードは英数字のみで入力してください';
+        return null;
+    }
+
+    // 新規登録
+    async function register() {
+        const username = document.getElementById('username').value.trim();
+        const personId = document.getElementById('newPersonId').value.trim();
+        const password = document.getElementById('newPassword').value;
+        const confirm = document.getElementById('confirmPassword').value;
+
+        if (!username || !personId || !password || !confirm) {
+            showMessage('すべての項目を入力してください', 'error');
+            return;
+        }
+        if (password !== confirm) {
+            showMessage('パスワードが一致しません', 'error');
+            return;
+        }
+        const pwError = validatePassword(password);
+        if (pwError) { showMessage(pwError, 'error'); return; }
+
+        const res = await fetch(`${API_BASE}/users/register`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify({ token: currentToken, username, personId, password })
+        });
+        const data = await res.json();
+        if (res.ok) {
+            showMessage('登録が完了しました', 'success');
+            setTimeout(() => window.location.href = 'login.html', 2000);
+        } else {
+            showMessage(data.message || '登録に失敗しました', 'error');
+        }
+    }
+
+    // メニュー切り替え
+    function onMenuChange() {
+        const val = document.getElementById('menuSelect').value;
+        ['changeUsernameForm', 'changePasswordForm', 'deleteForm'].forEach(id => {
+            document.getElementById(id).classList.remove('active');
+        });
+        if (val === 'A') document.getElementById('changeUsernameForm').classList.add('active');
+        if (val === 'B') document.getElementById('changePasswordForm').classList.add('active');
+        if (val === 'C') document.getElementById('deleteForm').classList.add('active');
+    }
+
+    // ユーザー名変更
+    async function changeUsername() {
+        const newUsername = document.getElementById('newUsername').value.trim();
+        if (!newUsername) { showMessage('ユーザー名を入力してください', 'error'); return; }
+
+        const res = await fetch(`${API_BASE}/users/username`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify({ username: newUsername })
+        });
+        const data = await res.json();
+        if (res.ok) {
+            showMessage('ユーザー名を変更しました', 'success');
+            setTimeout(() => window.location.href = 'login.html', 2000);
+        } else {
+            showMessage(data.message || '変更に失敗しました', 'error');
+        }
+    }
+
+    // パスワード変更
+    async function changePassword() {
+        const password = document.getElementById('changePassword').value;
+        const confirm = document.getElementById('changeConfirmPassword').value;
+
+        if (!password || !confirm) { showMessage('パスワードを入力してください', 'error'); return; }
+        if (password !== confirm) { showMessage('パスワードが一致しません', 'error'); return; }
+        const pwError = validatePassword(password);
+        if (pwError) { showMessage(pwError, 'error'); return; }
+
+        const res = await fetch(`${API_BASE}/users/password`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify({ password })
+        });
+        const data = await res.json();
+        if (res.ok) {
+            showMessage('パスワードを変更しました', 'success');
+            setTimeout(() => window.location.href = 'login.html', 2000);
+        } else {
+            showMessage(data.message || '変更に失敗しました', 'error');
+        }
+    }
+
+    // ユーザー削除
+    async function deleteUser() {
+        if (!confirm('本当に削除しますか？この操作は取り消せません。')) return;
+
+        const res = await fetch(`${API_BASE}/users`, {
+            method: 'DELETE',
+            credentials: 'include'
+        });
+        const data = await res.json();
+        if (res.ok) {
+            showMessage('削除しました', 'success');
+            setTimeout(() => window.location.href = 'login.html', 2000);
+        } else {
+            showMessage(data.message || '削除に失敗しました', 'error');
+        }
+    }
+
+    // ログイン画面へ
+    function goToLogin() { window.location.href = 'login.html'; }
+
+    // セクション表示切り替え
+    function showSection(id) {
+        ['emailSection', 'registerSection', 'menuSection'].forEach(s => {
+            document.getElementById(s).classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+    }
+
+    // メッセージ表示
+    function showMessage(msg, type) {
+        const el = document.getElementById('message');
+        el.textContent = msg;
+        el.className = `message ${type}`;
+        el.style.display = 'block';
+        setTimeout(() => el.style.display = 'none', 5000);
+    }
+</script>
+</body>
+</html>
